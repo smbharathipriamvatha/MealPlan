@@ -1,0 +1,58 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+/* Menu Card Container */
+.menu-card {
+    background-color: #fff;
+    width: 300px;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: auto;
+}
+
+/* Menu Title */
+.menu-title {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Menu Items */
+.menu-items {
+    list-style-type: none;
+}
+
+.menu-items li {
+    margin-bottom: 15px;
+}
+
+.menu-items a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    background-color: #f7f7f7;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Hover effect for the links */
+.menu-items a:hover {
+    background-color: #ff6347;
+    color: white;
+}
+
