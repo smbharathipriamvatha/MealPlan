@@ -1,58 +1,69 @@
-/* Basic reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    padding: 20px;
+    background-color: #f0f0f0;
 }
 
-/* Menu Card Container */
-.menu-card {
-    background-color: #fff;
-    width: 300px;
+.menu-container {
+    max-width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.menu {
+    background-color: #333;
+    width: 100%;
+    max-width: 400px;
     border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: auto;
 }
 
-/* Menu Title */
-.menu-title {
-    font-size: 24px;
-    color: #333;
-    text-align: center;
-    margin-bottom: 20px;
+.menu ul {
+    list-style: none;
+    padding: 10px 0;
 }
 
-/* Menu Items */
-.menu-items {
-    list-style-type: none;
+.menu li {
+    margin: 10px 0;
 }
 
-.menu-items li {
-    margin-bottom: 15px;
-}
-
-.menu-items a {
-    text-decoration: none;
-    color: #333;
-    font-size: 18px;
+.menu a {
     display: block;
     padding: 10px;
-    background-color: #f7f7f7;
-    border-radius: 4px;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-/* Hover effect for the links */
-.menu-items a:hover {
-    background-color: #ff6347;
+    text-decoration: none;
     color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
 }
 
+.menu a:hover {
+    background-color: #ff6347; /* Tomato color */
+}
+
+.menu a:nth-child(odd) {
+    background-color: #4CAF50; /* Green */
+}
+
+.menu a:nth-child(even) {
+    background-color: #2196F3; /* Blue */
+}
+
+@media (max-width: 768px) {
+    .menu-container {
+        padding: 5px;
+    }
+
+    .menu {
+        max-width: 100%;
+    }
+
+    .menu a {
+        font-size: 14px;
+    }
+}
