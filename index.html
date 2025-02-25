@@ -1,30 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Colorful Menu</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meal Planner Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="dashboard">
+    <h1>7-Day Meal Planner</h1>
+    <div class="week">
+      <!-- Loop through 7 days of the week -->
+      <div class="day" id="day1">
+        <h3>Day 1</h3>
+        <div class="meals">
+          <button class="meal" onclick="addMeal('Day 1', 1)">Add Breakfast</button>
+          <button class="meal" onclick="addMeal('Day 1', 2)">Add Lunch</button>
+          <button class="meal" onclick="addMeal('Day 1', 3)">Add Dinner</button>
+          <button class="meal" onclick="addMeal('Day 1', 4)">Add Snack</button>
+        </div>
+        <div id="meal1" class="meal-slot"></div>
+        <div id="meal2" class="meal-slot"></div>
+        <div id="meal3" class="meal-slot"></div>
+        <div id="meal4" class="meal-slot"></div>
+      </div>
 
-    <div class="menu-container">
-        <nav class="menu">
-            <ul>
-                <li><a href="https://example.com/item1">Item 1</a></li>
-                <li><a href="https://example.com/item2">Item 2</a></li>
-                <li><a href="https://example.com/item3">Item 3</a></li>
-                <li><a href="https://example.com/item4">Item 4</a></li>
-                <li><a href="https://example.com/item5">Item 5</a></li>
-                <!-- Repeat the structure for all 100 items -->
-                <li><a href="https://example.com/item6">Item 6</a></li>
-                <li><a href="https://example.com/item7">Item 7</a></li>
-                <!-- ... -->
-                <li><a href="https://example.com/item100">Item 100</a></li>
-            </ul>
-        </nav>
+      <!-- Repeat for 7 days -->
+      <!-- Day 2 to Day 7 structure can be repeated here -->
+
     </div>
+  </div>
 
+  <div class="modal" id="mealModal">
+    <div class="modal-content">
+      <label for="meal-url">Meal URL:</label>
+      <input type="url" id="meal-url" placeholder="Enter meal URL">
+      <button onclick="saveMeal()">Save Meal</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
 </body>
 </html>
-
