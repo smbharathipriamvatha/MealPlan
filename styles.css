@@ -1,69 +1,94 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
 }
 
-.menu-container {
-    max-width: 100%;
-    padding: 10px;
-    display: flex;
-    justify-content: center;
+.dashboard {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.menu {
-    background-color: #333;
-    width: 100%;
-    max-width: 400px;
-    border-radius: 8px;
+h1 {
+  text-align: center;
 }
 
-.menu ul {
-    list-style: none;
-    padding: 10px 0;
+.week {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
-.menu li {
-    margin: 10px 0;
+.day {
+  margin: 10px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  width: 200px;
 }
 
-.menu a {
-    display: block;
-    padding: 10px;
-    text-decoration: none;
-    color: white;
-    font-size: 16px;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
+.meals button {
+  display: block;
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-.menu a:hover {
-    background-color: #ff6347; /* Tomato color */
+.meals button:hover {
+  background-color: #45a049;
 }
 
-.menu a:nth-child(odd) {
-    background-color: #4CAF50; /* Green */
+.meal-slot {
+  padding: 5px;
+  border-top: 2px dashed #ccc;
+  margin-top: 10px;
 }
 
-.menu a:nth-child(even) {
-    background-color: #2196F3; /* Blue */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
 }
 
-@media (max-width: 768px) {
-    .menu-container {
-        padding: 5px;
-    }
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+}
 
-    .menu {
-        max-width: 100%;
-    }
+input[type="url"] {
+  width: 100%;
+  padding: 8px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
 
-    .menu a {
-        font-size: 14px;
-    }
+button {
+  padding: 8px 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
 }
